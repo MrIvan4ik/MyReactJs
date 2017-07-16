@@ -1,0 +1,412 @@
+// ::-webkit-scrollbar
+//     width: 12px
+//
+// ::-webkit-scrollbar-thumb
+//     background-color: #222222
+
+body, head, p, h1, h2, h3, h4, h5, h6, ul, pre
+ margin: 0
+ padding: 0
+
+li
+  list-style: none
+
+button
+  cursor: pointer
+
+a
+  text-decoration: none
+
+@font-face
+  font-family: "Roboto Condensed"
+  src: url(../font/RobotoCondensed-Regular.ttf)
+  font-weight: 400
+
+@font-face
+  font-family: Roboto
+  src: url(../font/Roboto-Bold.ttf)
+  font-weight: 700
+
+@font-face
+  font-family: Roboto
+  src: url(../font/Roboto-Regular.ttf)
+  font-weight: 400
+
+@mixin flex($dir, $justify, $alight)
+  display: flex
+  flex-direction: $dir
+  justify-content: $justify
+  align-items: $alight
+
+@mixin font($color,$family , $font-size, $weight, $lineheight)
+  color: $color
+  font-family: $family
+  font-size: $font-size
+  font-weight: $weight
+  line-height: $lineheight
+
+.header-fix
+  width: auto
+
+.header-contact
+  @include flex(row, space-between, center)
+  margin: auto
+  max-width: 1150px
+  padding-top: 33px
+
+.header-contact-block
+  @include flex(row, space-between, baseline)
+
+.logo
+  text-transform: uppercase
+  @include font(#67686d,"Roboto Condensed", 23px, 400, 27px )
+
+.header-contact-block__title
+  text-transform: uppercase
+  @include font(#7e7f84,Roboto , 12px, 700, 1 )
+  padding-right: 20px
+
+.phone
+  &::before
+    content: url("../img/call-out.png")
+    padding-right: 7px
+
+.mail
+  &::before
+    content: url("../img/envelope.png")
+    padding-right: 7px
+
+.header-contact-block-price-form
+  border: 1px solid #eeeeee
+  background-color: #ffffff
+  @include flex(row, space-around , center)
+  width: 219px
+  height: 33px
+
+.header-contact-block-price-form__title
+  text-transform: uppercase
+  @include font(#7e7f84, Roboto, 12px, 400, 1)
+
+.cart
+  &::before
+    content: url("../img/basket-loaded.png")
+    padding-right: 7px
+
+.check-btn
+  &::after
+    content: url("../img/check-btn.png")
+    padding-left: 7px
+
+.header-separator
+  max-width: 1170px
+  height: 1px
+  background-color: #eeeeee
+  margin: auto
+  margin-top: 30px
+
+.header-nav
+  @include flex(row, flex-start, center)
+  max-width: 1170px
+  height: 1px
+  margin: auto
+
+.header-nav__item
+  text-transform: uppercase
+  @include font(#7e7f84, roboto, 14px, 400, 1)
+  padding-right: 15px
+  margin-top: 40px
+
+.header-scroller-fix
+  @include flex(row, flex-start, center)
+  width: auto
+  background-color: #e3e3e3
+  margin-top: 40px
+  display: flex !important
+  height: 658px
+.header-scroller
+  height: 228px !important
+  @include flex(column, space-between, flex-start)
+  display: flex !important
+  position: relative
+  left: 100px
+
+.header-scroller__title
+  width: 433px
+  @include font(#ffffff, ROboto, 59px, 700, 63px)
+
+.slick-dots
+  position: relative
+  bottom: 100px !important
+
+.header-scroller__description
+  @include font(#ffffff, Roboto, 14px,500,16px)
+  width: 433px
+
+.slick-dots li.slick-active button:before
+  background-color: #ffffff
+
+.slick-dots li button::before
+  width: 12px !important
+  height: 13px !important
+  border: 2px solid #ffffff
+  content: "" !important
+  border-radius: 50%
+
+.header-scroller__button
+  width: 143px
+  height: 38px
+  background-color: #f45a40
+  border: 0
+  @include font(#ffffff, Roboto, 14px, 400, 1)
+  @include flex(row, center, center)
+
+.slick-dotted.slick-slider
+  margin-bottom: 0 !important
+
+.product
+  max-width: 1170px
+  margin: auto
+  padding-top: 65px
+  padding-bottom: 62px
+
+.product-fix
+  width: auto
+
+.product-menu
+  @include flex(row, space-between, center)
+
+.product-menu-item
+  @include flex(column, space-between, flex-start)
+
+.product-menu-item__image
+  width: 370px
+  height: 224px
+  background-color: #e3e3e3
+
+.product-menu-item__image_stars
+  &::before
+    content: url("../img/5-layers.png")
+    background-repeat: no-repeat
+    position: relative
+    top: 13px
+    left: 13px
+
+.product-menu-item__title
+  padding-top: 25px
+  padding-bottom: 25px
+  @include font(#f45a40, Roboto, 23px, 400, 1)
+
+.product-menu-item__description
+  @include font(#7e7f84, Roboto, 14px, 400, 1)
+  width: 324px
+
+.product-selected
+  text-decoration: underline
+
+.popular-product-slider_menu
+  @include flex(row, space-between, center)
+  max-width: 1210px
+  margin: auto
+
+.popular-product-fix
+
+.popular-product-title
+  @include font(#67686d, Roboto, 23px, 400, 1)
+  text-transform: uppercase
+  margin: auto
+  background-image: url("../img/shape.png")
+  background-repeat: no-repeat
+  @include flex(row, center, center)
+  background-position: center
+
+.popular-product-menu-item__image
+  width: 270px
+  height: 266px
+  background-color: #e3e3e3
+  &:hover
+    background-image: url("../img/magnifier--.png")
+    background-repeat: no-repeat
+    background-position: center
+
+.popular-product-menu-item
+  max-width: 270px
+  margin-top: 43px
+  border: 1px solid #eeeeee
+  @include flex(column, space-between, flex-start)
+  margin-left: 30px
+  margin-bottom: 64px
+
+.popular-product-menu-item__title
+  @include font(#67686d,Roboto, 18px, 500, 1)
+  padding-left: 21px
+  padding-top: 25px
+
+.popular-product-menu-item_after-title
+  @include font(#67686d,Roboto, 14px, 300, 1)
+  font-style: italic
+  padding-left: 21px
+  padding-top: 15px
+
+.popular-product-menu-item__description
+  @include font(#67686d,Roboto, 10px, 300, 1)
+  width: 216px
+  padding-left: 21px
+  padding-top: 15px
+  padding-bottom: 15px
+
+.popular-product-menu-item-make-order
+  border-top: 1px solid #eeeeee
+  width: 227px
+  @include flex(row, space-between, center)
+  margin: auto
+  padding-bottom: 19px
+
+.popular-product-menu-item-make-order__price
+  padding-top: 13px
+  text-transform: uppercase
+  @include font(#f45a40, Roboto, 14px, 500, 1)
+  &::before
+    content: "$ "
+
+.slick-prev:before, .slick-next:before
+  color: black !important
+
+.popular-product-menu-item-make-order__img
+  width: 42px
+  @include flex(row, space-between, center)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+.adress
+  @include flex(row, space-between, center)
+  width: 1170px
+  margin: auto
+  padding-bottom: 66px
+
+.adress-title
+  @include font(#67686d, Roboto, 23px, 700, 1)
+  padding-bottom: 45px
+
+.adress-title_strong
+  color: #f45a40
+
+.adress-description
+  @include font(#777777, Roboto, 18px, 500, 1)
+  padding-bottom: 45px
+
+.social-nav
+  width: 162px
+  @include flex(row, space-between, center)
+  font-weight: 400
+  a
+    color: #656363 !important
+
+.social-nav>a:hover
+  color: #ef4035 !important
+  transition: 0.5s
+.social-nav>a
+  transition: 0.5s
+
+.adress__info-container
+  width: 445px
+  font-style: italic
+  @include font(#7e7f84, Roboto, 14px, 400,1 )
+  @include flex(column, space-between, center)
+  border-left: 1px solid #eeeeee
+  height: 249px
+  padding-left: 20px
+
+.subscribe-fix
+  width: auto
+  background-color: #f45a40
+
+.subscribe
+  padding-top: 42px
+  margin: auto
+  max-width: 1170px
+  padding-bottom: 42px
+  @include flex(row, space-between, center)
+
+.subscribe__title
+  @include font(#ffffff, Roboto, 23px, 400, 1)
+
+.subscribe-form__input
+  width: 223px
+  height: 38px
+  background-color: #ffffff
+  border: 0
+  padding-left: 23px
+  margin-right: 20px
+  @include font(#7e7f84, Roboto, 14px,700,1)
+.subscribe-form__input::placeholder
+    text-transform: uppercase
+    @include font(#7e7f84, Roboto, 14px,400,1)
+
+.subscribe-form__button
+  width: 104px
+  height: 38px
+  background-color: #ff674f
+  border: 0
+  text-transform: uppercase
+  @include font(#ffffff, Roboto, 14px, 400, 1)
+
+.footer-fix
+  width: auto
+  height: 355px
+  background-color: #2a2d34
+
+.footer
+  max-width: 1170px
+  margin: auto
+  padding-top: 46px
+  padding-bottom: 43px
+  height: 266px
+  @include flex(row, space-between, center)
+
+.footer-our-stories
+
+.footer-title
+  padding-bottom: 25px
+  text-transform: uppercase
+  @include font(#ffffff, Roboto, 23px, 400, 1)
+
+.footer-description
+  @include font(#7e7f84, Roboto, 14px, 400, 1)
+  padding-bottom: 25px
+  strong
+    color: #ffffff
+
+.footer-desc-sup > a
+  @include font(#7e7f84, Roboto, 14px, 400, 1)
+
+.footer-form
+  @include flex(column, space-between, flex-start)
+  height: 234px
+
+.footer-form__inp
+  width: 251px
+  height: 29px
+  background-color: #ffffff
+  border: 0
+  @include font(#7e7f84, Roboto, 20px, 400, 1)
+  padding-left: 19px
+
+.footer-form__button
+  width: 138px
+  height: 33px
+  background-color: #f45a40
+  text-transform: uppercase
+  @include font(#ffffff, Roboto, 12px, 400, 1)
+  border: 0
+  
+.footer-form__text
+  width: 247px
+  height: 77px
+  background-color: #ffffff
+  padding-left: 19px
+  padding-top: 12px
+
+.footer-inputs::placeholder
+  text-transform: uppercase
+  @include font(#7e7f84, Roboto, 12px, 400, 1)

@@ -10853,16 +10853,11 @@ module.exports = __webpack_require__(52);
 "use strict";
 
 
-var _firstProduct = __webpack_require__(88);
+__webpack_require__(88);
 
-var _firstProduct2 = _interopRequireDefault(_firstProduct);
+__webpack_require__(160);
 
-var _secondProduct = __webpack_require__(160);
-
-var _secondProduct2 = _interopRequireDefault(_secondProduct);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+// require('../styles/style.sass')
 // Slider
 $('.header-scroller-fix').slick({
   dots: true,
@@ -10913,7 +10908,6 @@ var Image = _react2.default.createClass({
     return _react2.default.createElement('div', { className: 'product-menu-item__image' });
   }
 });
-
 var Items = _react2.default.createClass({
   displayName: 'Items',
 
@@ -10944,6 +10938,7 @@ var Items = _react2.default.createClass({
     );
   }
 });
+
 _reactDom2.default.render(_react2.default.createElement(Holder, null), document.getElementById('product-menu'));
 
 /***/ }),

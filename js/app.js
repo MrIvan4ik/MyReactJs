@@ -1,6 +1,6 @@
-import Holder from './first-product.jsx';
-import PopHolder from './second-product.jsx';
-
+import './first-product/first-product.jsx';
+import './second-product/second-product.jsx';
+// require('../styles/style.sass')
 // Slider
 $('.header-scroller-fix').slick({
   dots: true,

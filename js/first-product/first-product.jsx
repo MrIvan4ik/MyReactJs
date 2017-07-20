@@ -20,8 +20,6 @@ var Image = React.createClass({
     );
   }
 });
-
-
 var Items = React.createClass({
   propTypes: {
   title: React.PropTypes.string.isRequired,
@@ -44,6 +42,7 @@ var Items = React.createClass({
     );
   }
 });
+
 ReactDOM.render(
   <Holder />,
   document.getElementById('product-menu')

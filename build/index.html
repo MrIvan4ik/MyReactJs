@@ -1,0 +1,95 @@
+Html Webpack Plugin:
+<pre>
+  TypeError: Cannot read property 'request' of undefined
+  
+  - ExternalModuleFactoryPlugin.js:37 handleExternals
+    [ivan]/[webpack]/lib/ExternalModuleFactoryPlugin.js:37:33
+  
+  - ExternalModuleFactoryPlugin.js:46 next
+    [ivan]/[webpack]/lib/ExternalModuleFactoryPlugin.js:46:8
+  
+  - ExternalModuleFactoryPlugin.js:59 handleExternals
+    [ivan]/[webpack]/lib/ExternalModuleFactoryPlugin.js:59:7
+  
+  - ExternalModuleFactoryPlugin.js:79 ExternalModuleFactoryPlugin.<anonymous>
+    [ivan]/[webpack]/lib/ExternalModuleFactoryPlugin.js:79:5
+  
+  - NormalModuleFactory.js:246 applyPluginsAsyncWaterfall
+    [lib]/[webpack]/lib/NormalModuleFactory.js:246:4
+  
+  - Tapable.js:196 NormalModuleFactory.applyPluginsAsyncWaterfall
+    [lib]/[webpack]/[tapable]/lib/Tapable.js:196:70
+  
+  - NormalModuleFactory.js:230 NormalModuleFactory.create
+    [lib]/[webpack]/lib/NormalModuleFactory.js:230:8
+  
+  - Compilation.js:382 Compilation._addModuleChain
+    [lib]/[webpack]/lib/Compilation.js:382:17
+  
+  - Compilation.js:464 Compilation.addEntry
+    [lib]/[webpack]/lib/Compilation.js:464:8
+  
+  - SingleEntryPlugin.js:22 SingleEntryPlugin.<anonymous>
+    [ivan]/[webpack]/lib/SingleEntryPlugin.js:22:15
+  
+  - Tapable.js:229 Compiler.applyPluginsParallel
+    [lib]/[webpack]/[tapable]/lib/Tapable.js:229:14
+  
+  - Compiler.js:509 applyPluginsAsync.err
+    [lib]/[webpack]/lib/Compiler.js:509:9
+  
+  - Tapable.js:131 Compiler.applyPluginsAsyncSeries
+    [lib]/[webpack]/[tapable]/lib/Tapable.js:131:46
+  
+  - Compiler.js:502 Compiler.compile
+    [lib]/[webpack]/lib/Compiler.js:502:8
+  
+  - Compiler.js:290 Compiler.runAsChild
+    [lib]/[webpack]/lib/Compiler.js:290:8
+  
+  - compiler.js:70 
+    [MySite7]/[html-webpack-plugin]/lib/compiler.js:70:19
+  
+  - debuggability.js:300 Promise._execute
+    [MySite7]/[bluebird]/js/release/debuggability.js:300:9
+  
+  - promise.js:483 Promise._resolveFromExecutor
+    [MySite7]/[bluebird]/js/release/promise.js:483:18
+  
+  - promise.js:79 new Promise
+    [MySite7]/[bluebird]/js/release/promise.js:79:10
+  
+  - compiler.js:69 Object.compileTemplate
+    [MySite7]/[html-webpack-plugin]/lib/compiler.js:69:10
+  
+  - index.js:47 Compiler.<anonymous>
+    [MySite7]/[html-webpack-plugin]/index.js:47:40
+  
+  - Tapable.js:229 Compiler.applyPluginsParallel
+    [lib]/[webpack]/[tapable]/lib/Tapable.js:229:14
+  
+  - Compiler.js:509 applyPluginsAsync.err
+    [lib]/[webpack]/lib/Compiler.js:509:9
+  
+  - Tapable.js:131 Compiler.applyPluginsAsyncSeries
+    [lib]/[webpack]/[tapable]/lib/Tapable.js:131:46
+  
+  - Compiler.js:502 Compiler.compile
+    [lib]/[webpack]/lib/Compiler.js:502:8
+  
+  - Compiler.js:283 readRecords.err
+    [lib]/[webpack]/lib/Compiler.js:283:11
+  
+  - Compiler.js:395 Compiler.readRecords
+    [lib]/[webpack]/lib/Compiler.js:395:11
+  
+  - Compiler.js:280 applyPluginsAsync.err
+    [lib]/[webpack]/lib/Compiler.js:280:10
+  
+  - Tapable.js:138 next
+    [lib]/[webpack]/[tapable]/lib/Tapable.js:138:11
+  
+  - CachePlugin.js:35 Compiler.compiler.plugin
+    [lib]/[webpack]/lib/CachePlugin.js:35:59
+  
+</pre>
